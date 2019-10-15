@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
-{% from "macros/projects.html" import render_category_nav %}
-{% block title %}Project Categories{% endblock %}
+{% from "macros/projects.html" import render_author_list %}
+{% block title %}團員列表{% endblock %}
 {% block body %}
-  <h1>Project Categories</h1>
-  {{ render_category_nav(active=none) }}
+  <h1>團員列表</h1>
+  {{ render_author_list(active=none) }}
 {% endblock %}

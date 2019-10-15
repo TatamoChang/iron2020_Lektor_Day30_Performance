@@ -1,16 +1,27 @@
 {% macro render_category_nav(active=none) %}
   <ul>
-  {% for category in site.query('/project-categories') %}
+  {% for category in site.query('/authors') %}
     <li{% if category._id == active %} class="active"{% endif
       %}><a href="{{ category|url }}">{{ category.name }}</a></li>
   {% endfor %}
   </ul>
 {% endmacro %}
 
-{% macro render_project_list(projects) %}
+{% macro render_project_list(posts) %}
   <ul>
-  {% for project in projects %}
-    <li><a href="{{ project|url }}">{{ project.name }}</a></li>
+  {% for project in posts %}
+    <li><a href="{{ project|url }}">{{ project.title }}</a></li>
   {% endfor %}
   </ul>
+{% endmacro %}
+
+{% macro render_author_list(active=none) %}
+  <div class="list-group">
+        {% for category in site.query('/authors') %}
+        <a href="{{ category|url }}" class="list-group-item">
+            <h4 class="list-group-item-heading">{{ category.name }}</h4>
+            <p class="list-group-item-text">{{ category.article }}</p>
+        </a>
+        {% endfor %}
+  </div>
 {% endmacro %}
