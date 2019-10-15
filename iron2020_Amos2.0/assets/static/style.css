@@ -3,23 +3,23 @@ body {
     margin: 50px 25px;
 }
 
-a {
+/* a {
     color: #2a99b6;
 }
 
 a:hover {
     color: #33bbdf;
-}
+} */
 
 header, footer, div.page {
-    width: 760px;
+    width: 80%;
     margin: 0 auto;
-    background: #daeef3;
-    padding: 20px 30px;
+    /* background: #daeef3; */
+    padding: 20px 50px;
 }
 
 header h1 {
-    color: #169bbd;
+    /* color: #169bbd; */
     margin: 0;
     font-weight: normal;
     font-size: 42px;
@@ -38,5 +38,5 @@ header nav ul li {
 }
 
 div.page {
-    background: #f1fbfe;
+    /* background: #6d797c9f; */
 }
