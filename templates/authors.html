@@ -1,7 +1,35 @@
 {% extends "layout.html" %}
 {% from "macros/projects.html" import render_author_list %}
+{% set post_count = site.query('/posts').count() %}
+{% set authors_count = site.query('/authors').count() %}
 {% block title %}團員列表{% endblock %}
 {% block body %}
-  <h1>團員列表</h1>
+  <h1>團隊資訊</h1>
+  <div class="row">
+    <div class="team_status col-md-3">
+      <div class="teamInfo-title">累積文章</div>
+      <div class="description">
+        <span class="teamInfo-description">{{ post_count }}</span>篇
+      </div>
+    </div>
+    <div class="team_status col-md-3">
+      <div class="teamInfo-title">團隊人數</div>
+      <div class="description">
+        <span class="teamInfo-description">{{ authors_count }}</span>人
+      </div>
+      
+    </div>
+    <div class="team_status col-md-3">
+      <div class="teamInfo-title">開賽日期</div>
+      <div class="description">
+        <span class="teamInfo-description vertical-align: bottom">{{ this.start | dateformat('YYYY') }}.<span style="font-size: 1.5em;">{{ this.start | dateformat('MM.d') }}</span></span>
+      </div>
+    </div>
+    <div class="team_status col-md-3">
+      <div class="teamInfo-title">團隊狀態：</div>
+      <div class="teamInfo-description"></div>
+    </div>
+  </div>
+  <h1>團隊成員</h1>
   {{ render_author_list(active=none) }}
 {% endblock %}

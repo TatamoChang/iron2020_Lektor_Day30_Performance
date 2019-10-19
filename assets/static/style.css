@@ -40,3 +40,20 @@ header nav ul li {
 div.page {
     /* background: #6d797c9f; */
 }
+
+.team_status{
+    position: relative;
+    height: 80px;
+}
+.description{
+    position: absolute;
+    bottom: 0px;
+    vertical-align:bottom;
+}
+
+.teamInfo-description{
+    color: blueviolet;
+    font-size: 2em;
+    line-height: 1;
+
+}
