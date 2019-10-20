@@ -1,6 +1,7 @@
 body {
     font-family: 'Verdana', sans-serif;
     margin: 50px 25px;
+    background-color: rgb(238, 253, 255);
 }
 
 /* a {
@@ -38,17 +39,39 @@ header nav ul li {
 }
 
 div.page {
-    /* background: #6d797c9f; */
+    border-radius: 2px;
+    background: #fff;
 }
 
 .team_status{
     position: relative;
     height: 80px;
+    border-radius: 3px;
+    border: 1px #82848a solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(238, 253, 255);
+
 }
+
+.col-box{
+    padding: 5px 3px 5px 3px;
+}
+
+.status{
+    vertical-align: bottom;
+}
+
 .description{
     position: absolute;
     bottom: 0px;
     vertical-align:bottom;
+}
+
+.description.status-bar{
+    /* position: absolute; */
+    bottom: 0px;
+    width: 100%;
 }
 
 .teamInfo-description{
@@ -56,4 +79,15 @@ div.page {
     font-size: 2em;
     line-height: 1;
 
+}
+
+.p-icon{
+    text-align:right;
+}
+
+.row{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #fff;
 }
