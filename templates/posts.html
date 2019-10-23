@@ -3,7 +3,17 @@
   render_project_list, render_category_nav %}
 {% block title %}Projects{% endblock %}
 {% block body %}
-  <h1>Projects</h1>
-  {{ render_category_nav(active=none) }}
-  {{ render_project_list(this.children) }}
+
+<div class="content">
+  <div class="menu">
+    <h3>團隊成員</h3>
+    {{ render_category_nav(active=this._id) }}
+  </div>
+
+  <div class="main-article">
+    <h1>文章列表</h1>
+    {{ render_project_list(this.children) }}
+  </div>
+
+</div>
 {% endblock %}

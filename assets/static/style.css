@@ -91,3 +91,35 @@ div.page {
     border-radius: 3px;
     background-color: #fff;
 }
+
+.progress{
+    margin-bottom: 0px;
+}
+
+.content{
+    display:flex;
+}
+
+.menu{
+    background-color: rgb(208, 217, 218);
+    margin-right:10px; 
+    padding: 0px 10px;
+    width:150px;
+}
+.menu h3{
+    margin-top: 0px;
+}
+
+.menu ul{
+    padding-left: 20px;
+}
+.main-article{
+    /* background-color:#82848a; */
+    /* padding: 0px 20PX; */
+    margin: 0px auto;
+    width: 80%;
+}
+
+.main-article h1{
+    margin-top:0px;
+}
