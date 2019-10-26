@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>團員列表 — iron2020_Amos2.0</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../static/style.css">
+	</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">選單切換</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Amos的推坑教2.0</a>
+          </div>
+          
+          <!-- 手機隱藏選單區 -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!-- 左選單 -->
+            <ul class="nav navbar-nav">
+              
+                <li><a href="../../posts/">文章列表</a></li>
+              
+                <li class="active"><a href="../../posts/authors/">團隊成員</a></li>
+              
+            </ul>
+          </div>
+          <!-- 手機隱藏選單區結束 -->
+        </div>
+      </nav>
+    </header>
+    <div class="page">
+      
+
+
+<h1>團隊資訊</h1>
+<div class="row">
+  <div class="col-md-3 col-box">
+    <div class="team_status">
+      <div class="teamInfo-title">
+        累積文章
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+      </div>
+      <div class="description">
+        <span class="teamInfo-description">5</span>篇
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-box">
+    <div class="team_status">
+      <div class="teamInfo-title">
+        團隊人數
+        <div class="p-icon">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="description">
+        <span class="teamInfo-description">7</span>人
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-box">
+    <div class="team_status">
+      <div class="teamInfo-title">
+        開賽日期
+        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+      </div>
+      <div class="description">
+        <span class="teamInfo-description">2019.<span
+            style="font-size: 1.5em;">09.16</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-box">
+    <div class="team_status">
+      <div class="teamInfo-title">團隊狀態</div>
+      <div class="description">
+        <span class="teamInfo-description" id="team_status">
+          挑戰中
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-box">
+    <div class="team_status">
+      <div class="teamInfo-title">挑戰進度</div>
+      <div class="status">
+        <div class="col-md-2" style="font-size: 3em;">
+          DAY01
+        </div>
+        <div class="col-md-10">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+              style="min-width: 2em; width: 0%;">
+              0%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var totalArticle = 30 * 7;
+  var nowprocess = 5 / totalArticle;
+  var myHeading = document.getElementsByClassName('progress-bar');
+  myHeading[0].style.width = Math.round(nowprocess * 100) + "%"
+  myHeading[0].textContent = Math.round(nowprocess * 100) + "%"
+  var team_status = document.getElementById("team_status")
+  if (nowprocess >= totalArticle) {
+    team_status.textContent = "挑戰成功！！"
+  } else {
+    team_status.textContent = "挑戰中..."
+  }
+</script>
+<h1>團隊成員</h1>
+
+  <div class="list-group">
+        
+        <a href="../../posts/authors/clarence/" class="list-group-item">
+            <h4 class="list-group-item-heading">Clarence</h4>
+            <p class="list-group-item-text">LINE bot 好好玩 30 天玩轉 LINE API</p>
+        </a>
+        
+        <a href="../../posts/authors/csscoke/" class="list-group-item">
+            <h4 class="list-group-item-heading">CSScoke</h4>
+            <p class="list-group-item-text">金魚都能懂的這個網頁畫面怎麼切 - 金魚都能懂了你還怕學不會嗎</p>
+        </a>
+        
+        <a href="../../posts/authors/hina-hina/" class="list-group-item">
+            <h4 class="list-group-item-heading">Hina Hina</h4>
+            <p class="list-group-item-text">陣列大亂鬥</p>
+        </a>
+        
+        <a href="../../posts/authors/king-tzeng/" class="list-group-item">
+            <h4 class="list-group-item-heading">King Tzeng</h4>
+            <p class="list-group-item-text">IoT沒那麼難！新手用JavaScript入門做自己的玩具～</p>
+        </a>
+        
+        <a href="../../posts/authors/vita-ora/" class="list-group-item">
+            <h4 class="list-group-item-heading">Vita Ora</h4>
+            <p class="list-group-item-text">好 Js 不學嗎 !? JavaScript 入門中的入門。</p>
+        </a>
+        
+        <a href="../../posts/authors/tatamo/" class="list-group-item">
+            <h4 class="list-group-item-heading">塔塔默</h4>
+            <p class="list-group-item-text">用Python開發的網頁不能放到Github上？Lektor說可以！！</p>
+        </a>
+        
+        <a href="../../posts/authors/erinus/" class="list-group-item">
+            <h4 class="list-group-item-heading">阿斬</h4>
+            <p class="list-group-item-text">Python 程式交易 30 天新手入門</p>
+        </a>
+        
+  </div>
+
+
+    </div>
+    <footer>
+      &copy; Copyright 2019 by tatamo.
+    </footer>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
