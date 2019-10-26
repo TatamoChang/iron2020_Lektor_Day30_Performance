@@ -1,0 +1,5 @@
+[project]
+name = iron2020_Amos2.0
+[servers.ghpages]
+name = Github Pages
+target = ghpages+https://HanInfinity/iron2020_Lektor_Day30_Performance
