@@ -4,6 +4,8 @@
 {% set authors_count = site.query('/authors').count() %}
 {% block title %}團員列表{% endblock %}
 {% block body %}
+
+
 <h1>團隊資訊</h1>
 <div class="row">
   <div class="col-md-3 col-box">
@@ -37,7 +39,7 @@
         <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
       </div>
       <div class="description">
-        <span class="teamInfo-description vertical-align: bottom">{{ this.start | dateformat('YYYY') }}.<span
+        <span class="teamInfo-description">{{ this.start | dateformat('YYYY') }}.<span
             style="font-size: 1.5em;">{{ this.start | dateformat('MM.d') }}</span></span>
       </div>
     </div>
@@ -45,12 +47,16 @@
   <div class="col-md-3 col-box">
     <div class="team_status">
       <div class="teamInfo-title">團隊狀態</div>
-      <div class="teamInfo-description"></div>
+      <div class="description">
+        <span class="teamInfo-description" id="team_status">
+          挑戰中
+        </span>
+      </div>
     </div>
   </div>
   <div class="col-md-12 col-box">
     <div class="team_status">
-      <div class="teamInfo-title">團隊狀態</div>
+      <div class="teamInfo-title">挑戰進度</div>
       <div class="status">
         <div class="col-md-2" style="font-size: 3em;">
           DAY01
@@ -58,8 +64,8 @@
         <div class="col-md-10">
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-              style="width: 60%;">
-              <span class="sr-only">60% Complete</span>
+              style="min-width: 2em; width: 0%;">
+              0%
             </div>
           </div>
         </div>
@@ -67,7 +73,19 @@
     </div>
   </div>
 </div>
-
+<script>
+  var totalArticle = 30 * {{ authors_count }};
+  var nowprocess = {{ post_count }} / totalArticle;
+  var myHeading = document.getElementsByClassName('progress-bar');
+  myHeading[0].style.width = Math.round(nowprocess * 100) + "%"
+  myHeading[0].textContent = Math.round(nowprocess * 100) + "%"
+  var team_status = document.getElementById("team_status")
+  if (nowprocess >= totalArticle) {
+    team_status.textContent = "挑戰成功！！"
+  } else {
+    team_status.textContent = "挑戰中..."
+  }
+</script>
 <h1>團隊成員</h1>
 {{ render_author_list(active=none) }}
 {% endblock %}

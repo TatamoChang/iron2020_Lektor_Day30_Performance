@@ -68,6 +68,10 @@ div.page {
     vertical-align:bottom;
 }
 
+#team_status{
+    font-size: 3em;
+}
+
 .description.status-bar{
     /* position: absolute; */
     bottom: 0px;
@@ -83,6 +87,7 @@ div.page {
 
 .p-icon{
     text-align:right;
+    display: inline;
 }
 
 .row{
@@ -93,7 +98,7 @@ div.page {
 }
 
 .progress{
-    margin-bottom: 0px;
+    margin: 20px 0;
 }
 
 .content{
